@@ -1,0 +1,139 @@
+/*index.html*/
+html,body{ height: 100%; min-width: 960px; min-height: 300px; width: 100%; background: #f6f7fa;}
+.page { height: 100%; position: relative;}
+
+/*header*/
+.header {position: fixed; z-index: 3; top: 0; left: 0; padding:0 40px; background: #289cf1 url(../img/title_bg.png) 10px 0; height: 72px; line-height: 72px; width: 100%;}
+.header .title { color: white; font-size:24px; font-weight: normal; }
+
+/*siderbar*/
+.sidebar { width: 240px; position: absolute; left: 0px; top:72px; min-height: 400px; background: #ededfb;  border-right: 1px #d3d8df solid; }
+.sidebar li {cursor: pointer;border-bottom:1px #dddded solid; }
+.sidebar li:first-of-type { border-top: none;}
+.sidebar .iconfont {font-size: 20px; color: #898989; width: 24px; height: 24px; padding-right: 18px;}
+.sidebar li a ,.sidebar li h3{font-weight: normal; padding-left: 30px; font-size: 14px; color: #373737; display: inline-block; height: 42px; line-height: 42px; width: 210px;}
+.sidebar li a:hover ,.sidebar li h3:hover{ background: #d5dfe9;}
+.sidebar .active { background: #d5dfe9; border-right: 4px #289cf1 solid;}
+.sidebar .active .iconfont{ color: #289cf1;}
+
+/*二级菜单*/
+.sidebar h3{ border-bottom:1px #dddded solid ;}
+.sidebar h3 .arrow{ font-size: 14px; padding-left:80px;}
+.sidebar .show { display: block;}
+.sidebar .hide { display: none;}
+.sidebar li ul li { border-bottom:none; height: 38px; line-height: 38px;}
+.sidebar li ul li a { padding-left:68px; width: 172px;}
+.sidebar li ul li a .iconfont { font-size: 12px;  padding-right: 10px;}
+
+/*#main*/
+#main { position:absolute; left: 250px; top:72px; margin: 0 20px 20px 10px; min-width:950px;}
+
+/*当前位置*/
+#position { background: white; padding: 10px; position: relative;}
+#position p{height: 32px; line-height: 32px; }
+#position p .iconfont { color: #289cf1;}
+#position p .icon-exit { font-size: 18px;}
+#position p .icon-home {font-size: 24px; position: relative; top: 3px;}
+#position p a { padding:0 16px 0 10px; color: #2B2B2B;}
+#position p a:hover { color: #289CF1;}
+
+/*首页*/
+#rank ol { padding:10px;}
+#rank li { border-bottom: 1px #F8F8F9 solid; padding: 5px 0 10px 5px;}
+#browse { background: white; padding: 10px; position: relative;}
+#browse  h2{height:42px; line-height: 42px;  color: #289cf1;}
+#browse .rank { height:42px; line-height: 42px; padding-left: 20px;}
+#browse .rank span{font-weight: bold; color: #2592E1; padding-right: 20px;}
+#browse .rank a:hover {text-decoration: underline;}
+#browse .time { background: #ffe013; color: white; font-size: 16px; position: absolute; right: 30px; top: 0; padding: 12px 16px;}
+#eChart .tr2 .box{height:240px;margin-right: 20px; }
+#eChart .tr2 #zdry, #eChart .tr2 #dwzf { margin-right: 0;}
+#staChart { width:800px; height: 400px; margin: 0 auto; padding-top: 20px;}
+
+/*信息展示样式*/
+#infoShow { background: white; padding: 10px;  margin: 10px auto;}
+
+#infoShow .tb td{ text-align: left;border: 1px #EBEAEA solid; padding: 5px;}
+#infoShow .tb td img { width: 80px; height: 114px;}
+
+#infoShow .tb .b {font-weight: bold; width: 100px; background: #f5f5f5;}
+#infoShow .tb .title { text-align: center; font-weight: bold; color: #2592E1;}
+#infoShow .tb p { height: 32px; line-height: 32px; margin: 0 10px;  font-weight: bold; border-bottom: 1px #f5f5f5 solid;}
+#infoShow .tb p span { font-weight: normal; padding-left: 20px;}
+#infoShow .tb p img{ padding: 2px; border: 1px #f5f5f5 solid;}
+#infoShow .tb .pic img,
+#infoShow .tb .video img{ cursor:zoom-in; width: 60px; height: 40px; padding: 2px; border: 1px #f5f5f5 solid;}
+#infoShow .tb .picZoomIn ,
+#infoShow .tb .videoZoomIn { margin:10px 0; cursor: zoom-out; /*display: none;*/}
+#infoShow .tb .picZoomIn img ,
+#infoShow .tb .videoZoomIn img { width: auto; height: auto;}
+#infoShow .tb .pic li,
+#infoShow .tb .video li { margin:10px 10px 0 0; float: left; position: relative;}
+#infoShow .tb .pic .active ,
+#infoShow .tb .video .active{ border: 2px #2592E1 solid; background: none; }
+#infoShow .tb .pic .active img,
+ #infoShow .tb .video .active img { cursor: zoom-out;}
+#infoShow .tb .pic li.active:after , 
+#infoShow .tb .video li.active:after{ content:''; display:block; width:0px; height:0px; position: absolute; left: 30px; bottom: -8px; border-top: 6px solid #289CF1; border-left: 6px solid transparent; border-right: 6px solid transparent;}
+
+#infoShow .tb tr .c { vertical-align: middle; max-width: 140px;}
+#infoShow .tb  tbody tr { height:32px;}
+#infoShow .tb tr:nth-child(2n){ background: none;}
+#infoShow .tb tbody tr:hover { background: none; }
+
+#tabs { margin: 10px 0px;}
+#tabs .tb td{border-top: 1px #EBEAEA solid; text-align: center;}
+#infoShow .tb  tbody tr tr {  height: 32px; border:none;}
+#tabs .tb th { color: #000000; border: 1px #EBEAEA solid;  text-align: center; background:#F4F4F4;font-weight: bold;}
+#tabs  #tabs-6 .tb td { text-align: left; padding: 5px;}
+#tabs  #tabs-6 .tb .c { text-align: center; width: auto;}
+
+.btnGroup { text-align: center; margin-top: 20px; padding-bottom: 20px;}
+/*工作提示查看*/
+#tipShow { margin-top: 10px;}
+#tipShow .tipTb { border-left: none; border-right: none;}
+#tipShow .tipTb td, #tipShow .tipTb th{ text-align: left;}
+#tipShow .tipBox { height: 240px; background: white;  margin:10px 10px 0 0;}
+.tipTb { width: 100%; font-size: 12px; color: #252525; border: 1px #EBEAEA solid; border-top: none; margin-bottom:12px;}
+.tipTb thead tr{ background: #289cf1; color: white; }
+.tipTb thead th { font-weight: normal;  padding:0 5px; }
+.tipTb tr{ height: 32px; }
+.tipTb tbody tr { -webkit-transition:0.2s; }
+.tipTb tr:nth-child(2n){ background: #f8f8f9;}
+.tipTb tbody tr:hover { background: #e2f2fe; }
+.tipTb tbody .active { background: #d5dfe9;}
+.tipTb tbody td{ padding:0 5px; }
+
+/*工作提示-推送*/
+#workTips_push .selfSend li { padding: 10px;}
+.selfSend li .space { padding-left:45px;}
+.selfSend li textarea {font-size: 16px; padding: 10px; font-family: "微软雅黑"; resize: none;}
+
+/*组织机构*/
+.treeView { width: 280px; min-height: 240px; max-height:540px; overflow: auto;}
+.treeView .tittle {padding: 10px 0;  margin-bottom: 10px;}
+.treeView h2 { font-size: 16px; }
+.view #tabs .tb .b {  width: 120px; }
+.view #tabs .tb td{ text-align: left; vertical-align: middle;}
+.view #tabs .tb i { color: red; padding-right: 8px;}
+.view #tabs .tb input { vertical-align: middle;}
+
+/*系统管理*/
+.table .sysTb { background: white;}
+.table .operate { padding:16px; background: white;}
+
+/*弹出框*/
+.dialog table { width: 100%; margin: 10px 0;}
+.dialog table tr{ height: 28px; font-size: 12px;}
+.dialog table td { border: 1px #EBEAEA solid; padding:5px ; }
+.dialog table .b{ width: 100px; background:#f8f8f9;; font-weight: bold; text-align: right;}
+.dialog table td input { vertical-align: middle; }
+.dialog table td input[type='text'] { width: 200px; height: 28px;}
+.dialog table td i { color: red; padding-right: 8px;}
+
+/*字典数据管理*/
+/*弹出框*/
+#dialogContent { width: 640px; height:190px; background: white;}
+#dialogContent #infoShow { padding: 0;}
+#dialogContent .treeView { width: 220px; height: 290px; overflow: auto;}
+#dialogContent .view { width: 376px; margin-left: 10px;}

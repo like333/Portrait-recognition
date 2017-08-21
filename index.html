@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>石景山分局入户走访管理平台</title>
+		<link rel="stylesheet" href="css/custom.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="fonts/iconfont.css"/>
+		<link rel="stylesheet" href="css/jquery-ui.css" />
+		
+		<script src="js/jquery-1.11.0.js"></script>
+		<script src="js/jquery-ui.js"></script>
+		<script src="js/common.js"></script>
+		<script src="js/index.js"></script>
+		<script type="text/javascript" src="js/echarts.common.min.js"></script>
+		<script type="text/javascript" src="js/tjChart.js"></script>
+		<script>
+			$(function(){
+				$(".dialog").dialog({
+					width: 260,
+					maxHeight:460
+				});
+				$(".rank").find($('a')).on("click", function() {
+					$("#rank").dialog("open");
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<!--头部-->
+		<div class="header">
+			<h1 class="title l">石景山分局入户走访管理平台</h1>
+		</div>
+		<!--侧边栏-->
+		<ul class="sidebar">
+			<li class="active"><a href="index.html"><i class="iconfont icon-gongzuotai"></i>首页</a></li>
+			<li><a href="ruhu.html"><i class="iconfont icon-rhzf"></i>入户走访管理</a></li>
+			<li><a href="unit.html"><i class="iconfont icon-danwei"></i>单位走访管理</a></li>
+			<li><a href="importMange.html"><i class="iconfont icon-important"></i>重点人员管理</a></li>
+			<li><a href="addressMange.html"><i class="iconfont icon-address"></i>标准地址管理</a></li>
+			<li><a href="workTips.html"><i class="iconfont icon-tishi"></i>工作提示管理</a></li>
+			<li><a href="workEffect.html"><i class="iconfont icon-gzcx"></i>工作成效管理</a></li>
+			<li><a href="statistic.html"><i class="iconfont icon-tongji"></i>勤务统计分析</a></li>
+			<li><h3><i class="iconfont icon-sysM"></i>系统管理<i class="iconfont arrow icon-up"></i></h3>
+				<ul class="hide">
+					<li><a href="sys_orgnaization.html"><i class="iconfont icon-square"></i>组织机构</a></li>
+					<li><a href="sys_user.html"><i class="iconfont icon-square"></i>用户管理</a></li>
+					<li><a href="sys_resource.html"><i class="iconfont icon-square"></i>资源管理</a></li>
+					<li><a href="sys_role.html"><i class="iconfont icon-square"></i>角色管理</a></li>
+					<li><a href="sys_dictionary.html"><i class="iconfont icon-square"></i>字典管理</a></li>
+					<li><a href="sys_dailyRecord.html"><i class="iconfont icon-square"></i>系统日志</a></li>
+				</ul>
+			</li>
+		</ul>
+		<div id="main">
+			<!--当前位置-->
+			<div id="browse" class="clear bor_b"> 
+				<h2 class="l">今日工作总览</h2>
+				<p class="l rank">排名：<span>第12名</span><a href="#">点击查看排名</a></p>
+				<p class="r time"></p>
+			</div>
+			<div id="rank" class="dialog" title="排名情况">
+				<ol>
+					<li>1.张三</li>
+					<li>2.李四</li>
+					<li>3.赵武</li>
+					<li>4.赵武</li>
+					<li>5.赵武</li>
+					<li>6.赵武</li>
+				</ol>
+			</div>
+			<!--查询条件-->
+			<div id="eChart">
+				<div class="tr2 clear">
+					<div id="rhzf" class="box l"></div>
+					<div id="zdry" class="box l"></div>
+				</div>
+				<div class="tr2 clear">
+					<div id="aqyh" class="box l"></div>
+					<div id="dwzf" class="box l"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

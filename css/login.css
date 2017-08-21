@@ -1,0 +1,96 @@
+html,
+body,
+#login {
+	height: 100%;
+	width: 100%;
+	background: #0061ae;
+	min-width: 500px;
+	min-height: 500px;
+}
+#box {
+	position: absolute;
+	width: 100%;
+	min-width: 500px;
+	height: 344px;
+	background: #f4f4f4;
+	text-align: center;
+}
+#box h1{
+	text-align: center;
+	margin-top: -24px;
+	padding-bottom:24px;
+	font-size: 26px;
+	color: #fff;
+	background: #0061ae;
+}
+#box .iUser{
+	position: relative;
+	width: 340px;
+	text-align: center;
+	display: inline-block;
+	height: 100%;
+	
+}
+
+#box .text_box,#box form a,#box .btn,.iconfont{
+	left: 28px;
+	position: absolute;
+}
+
+#box .text_box{
+	width: 260px;
+	height: 40px;
+	line-height: 40px;
+	border: 1px #A9A9A9 solid;
+	border-radius: 3px;
+	color: #373737;
+	padding-left:30px ;
+}
+
+#box .light_gray{
+	color:#aeaeae;
+}
+.iconfont{ z-index: 3; left: 36px;}
+.icon-user{ top: 50px;}
+.icon-psw{ top: 110px;}
+#box .user{
+	top:40px;
+}
+#box .psw {
+	top:100px;
+}
+
+#box form a{
+	top: 208px;
+	color: #575757;
+}
+#box form a:hover{
+	color: #005c9e;
+	text-decoration: underline;
+}
+#box .btn{
+	width:138px;
+	height: 36px;
+	color: white;
+	border: none;
+	border-radius: 3px;
+	top: 158px;
+	cursor: pointer;
+}
+#box .login_btn{
+	background: #59b63e;
+	border: 1px #4ba730 solid;
+	left: 22px;
+}
+#box .login_btn:hover{
+	background: #4ba730;
+}
+#box .cancel_btn{
+	background: #a9a9a9;
+	border: 1px #a1a1a5 solid;
+	left: 178px;
+}
+
+#box .cancel_btn:hover{
+	background: #a1a1a5;
+}

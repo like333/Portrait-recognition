@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>石景山分局入户走访管理平台</title>
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/custom.css" />
+		<link rel="stylesheet" type="text/css" href="fonts/iconfont.css"/>
+		<link rel="stylesheet" href="css/tree.css" />
+		<link rel="stylesheet" href="css/jquery-ui.css" />
+		<script src="js/jquery-1.11.0.js"></script>
+		<script src="js/jquery-ui.js"></script>
+		<script src="js/common.js"></script>
+		<script src="js/index.js"></script>
+	</head>
+
+	<body>
+		<!--头部-->
+		<div class="header">
+			<h1 class="title">石景山分局入户走访管理平台</h1>
+		</div>
+		<!--侧边栏-->
+		<ul class="sidebar">
+			<li><a href="index.html"><i class="iconfont icon-gongzuotai"></i>首页</a></li>
+			<li><a href="ruhu.html"><i class="iconfont icon-rhzf"></i>入户走访管理</a></li>
+			<li><a href="unit.html"><i class="iconfont icon-danwei"></i>单位走访管理</a></li>
+			<li><a href="workTips.html"><i class="iconfont icon-tishi"></i>工作提示管理</a></li>
+			<li><a href="workEffect.html"><i class="iconfont icon-gzcx"></i>工作成效管理</a></li>
+			<li><a href="statistic.html"><i class="iconfont icon-tongji"></i>勤务统计分析</a></li>
+			<li><h3><i class="iconfont icon-sysM"></i>系统管理<i class="iconfont arrow icon-up"></i></h3>
+				<ul class="show">
+					<li><a href="sys_orgnaization.html"><i class="iconfont icon-square"></i>组织机构</a></li>
+					<li><a href="sys_user.html"><i class="iconfont icon-square"></i>用户管理</a></li>
+					<li  class="active"><a href="sys_resource.html"><i class="iconfont icon-square"></i>资源管理</a></li>
+					<li><a href="sys_role.html"><i class="iconfont icon-square"></i>角色管理</a></li>
+					<li><a href="sys_dictionary.html"><i class="iconfont icon-square"></i>字典管理</a></li>
+					<li><a href="sys_dailyRecord.html"><i class="iconfont icon-square"></i>系统日志</a></li>
+				</ul>
+			</li>
+		</ul>
+		<div id="main">
+			<!--当前位置-->
+			<div id="position" class="clear bor_b"> 
+				<p class="l">当前位置：<span class="pos">系统管理 > 资源管理</span></p>
+				<p class="r"><i class="iconfont icon-home"></i><a href="index.html">返回首页</a><i class="iconfont icon-exit"></i><a href="login.html">退出</a></p>
+			</div>
+			<!--查询条件-->
+			<div class="box bor_b l treeView">
+				<div class="clear bor_b tittle" >
+					<h2 class="l">组织机构</h2>
+					<input type="button" class="btn red r" value="删除" />
+				</div>
+				<div id="tree">
+				</div>
+			</div>
+			<div id="infoShow" class="box bor_b r view" >
+				<div id="tabs">
+					<ul>
+						<li><a href="#tView">查看</a></li>
+						<li><a href="#tAdd">新增</a></li>
+						<li><a href="#tEdit">修改</a></li>
+					</ul>
+					<div id="tView">
+						<table class="tb">
+							<tr>
+								<td class="b">资源名称:</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td class="b">资源描述：</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td class="b">URL：</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td class="b">是否有效：</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td class="b">是否为菜单：</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td class="b">父菜单名称：</td>
+								<td></td>
+							</tr>
+						</table>
+					</div>
+					<div id="tAdd">
+						<table class="tb">
+							<tr>
+								<td class="b"><i>*</i>资源名称:</td>
+								<td><input type="text" /></td>
+							</tr>
+							<tr>
+								<td class="b"><i>*</i>资源描述：</td>
+								<td><input type="text" /></td>
+							</tr>
+							<tr>
+								<td class="b"><i>*</i>URL：</td>
+								<td><input type="text" /></td>
+							</tr>
+							<tr>
+								<td class="b">是否有效：</td>
+								<td>
+									<input type="radio" checked name="valid_edit" id="yes_edit">
+									<label for="yes_edit">是</label>
+									<input type="radio" name="valid_edit" id="no_edit">
+									<label for="no_edit">否</label>
+								</td>
+							</tr>
+							<tr>
+								<td class="b">是否为菜单：</td>
+								<td>
+									<input type="radio" checked name="menu_edit" id="is_menu_edit">
+									<label for="is_menu_edit">是</label>
+									<input type="radio" name="menu_edit" id="not_menu_edit">
+									<label for="not_menu_edit">否</label>
+								</td>
+							</tr>
+							<tr>
+								<td class="b">重传图标：</td>
+								<td>
+									<input type="radio" checked name="icon" id="no_icon">
+									<label for="no_icon">无图标</label>
+									<input type="radio" name="icon" id="has_icon">
+									<label for="has_icon">上传图标</label>
+								</td>
+							</tr>
+							<tr>
+								<td class="b">父菜单：</td>
+								<td>
+									<input type="text" />
+								</td>
+							</tr>
+						</table>
+						<div style="text-align: center;">
+							<input type="submit" value="保存" class="btn blue" />
+						</div>
+					</div>
+					<div id="tEdit">
+						<table class="tb">
+							<tr>
+								<td class="b"><i>*</i>资源名称:</td>
+								<td><input type="text" /></td>
+							</tr>
+							<tr>
+								<td class="b"><i>*</i>资源描述：</td>
+								<td><input type="text" /></td>
+							</tr>
+							<tr>
+								<td class="b"><i>*</i>URL：</td>
+								<td><input type="text" /></td>
+							</tr>
+							<tr>
+								<td class="b">是否有效：</td>
+								<td>
+									<input type="radio" checked  name="valid_add" id="yes_add">
+									<label for="yes_add">是</label>
+									<input type="radio" name="valid_add" id="no_add">
+									<label for="no_add">否</label>
+								</td>
+							</tr>
+							<tr>
+								<td class="b">是否为菜单：</td>
+								<td>
+									<input type="radio" checked  name="menu_add" id="is_menu_add">
+									<label for="is_menu_add">是</label>
+									<input type="radio" name="menu_add" id="not_menu_add">
+									<label for="not_menu_add">否</label>
+								</td>
+							</tr>
+							<tr>
+								<td class="b">重传图标：</td>
+								<td>
+									<input type="file" />
+								</td>
+							</tr>
+							<tr>
+								<td class="b">父菜单：</td>
+								<td>
+									<input type="text" />
+									<input type="button" class="btn green"  value="选择"/>
+								</td>
+							</tr>
+						</table>
+						<div style="text-align: center;">
+							<input type="submit" value="保存" class="btn blue" />
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<!--树形菜单-->
+		<script>
+			$(function() {
+				function createNode() {
+					var root = {
+						"id": "0",
+						"text": "基础框架",
+						"value": "86",
+						"showcheck": true,
+						complete: true,
+						"isexpand": true,
+						"checkstate": 0,
+						"hasChildren": true
+					};
+					var node1 = ['接口','系统管理','平台管理','MAM','MDM','DEM'];
+					var node2 = ['公共交通安全保卫总队', '东城分局', '石景山分局', '西城分局', '朝阳分局', '海淀分局'];
+					var arr = [];
+					for(var i = 0; i < node1.length; i++) {
+						var subarr = [];
+						for(var j = 0; j < node2.length; j++) {
+							var value = "node-" + i + "-" + j;
+							subarr.push({
+								"id": value,
+								"text": node2[j],
+								"value": value,
+								"showcheck": true,
+								complete: true,
+								"isexpand": false,
+								"checkstate": 0,
+								"hasChildren": false
+							});
+						}
+						arr.push({
+							"id": "node-" + i,
+							"text": node1[i],
+							"value": "node-" + i,
+							"showcheck": true,
+							complete: true,
+							"isexpand": false,
+							"checkstate": 0,
+							"hasChildren": true,
+							"ChildNodes": subarr
+						});
+					}
+					root["ChildNodes"] = arr;
+					return root;
+				}
+				treedata = [createNode()];
+				function load() {
+					var o = {
+						showcheck: true
+					};
+					o.data = treedata;
+					$("#tree").treeview(o);
+				};
+				load();
+			})
+		</script>
+	</body>
+
+</html>

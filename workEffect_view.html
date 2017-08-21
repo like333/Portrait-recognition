@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>石景山分局入户走访管理平台</title>
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/custom.css" />
+		<link rel="stylesheet" type="text/css" href="fonts/iconfont.css"/>
+		<link rel="stylesheet" href="css/jquery-ui.css" />
+		<script src="js/jquery-1.11.0.js"></script>
+		<script src="js/jquery-ui.js"></script>
+		<script src="js/common.js"></script>
+		<script src="js/index.js"></script>
+	</head>
+	<body>
+		<!--头部-->
+		<div class="header">
+			<h1 class="title">石景山分局入户走访管理平台</h1>
+		</div>
+		<!--侧边栏-->
+		<ul class="sidebar">
+			<li><a href="index.html"><i class="iconfont icon-gongzuotai"></i>首页</a></li>
+			<li><a href="ruhu.html"><i class="iconfont icon-rhzf"></i>入户走访管理</a></li>
+			<li><a href="unit.html"><i class="iconfont icon-danwei"></i>单位走访管理</a></li>
+			<li><a href="workTips.html"><i class="iconfont icon-tishi"></i>工作提示管理</a></li>
+			<li class="active"><a href="workEffect.html"><i class="iconfont icon-gzcx"></i>工作成效管理</a></li>
+			<li><a href="statistic.html"><i class="iconfont icon-tongji"></i>勤务统计分析</a></li>
+			<li><h3><i class="iconfont icon-sysM"></i>系统管理<i class="iconfont arrow icon-up"></i></h3>
+				<ul class="hide">
+					<li><a href="sys_orgnaization.html"><i class="iconfont icon-square"></i>组织机构</a></li>
+					<li><a href="sys_user.html"><i class="iconfont icon-square"></i>用户管理</a></li>
+					<li><a href="sys_resource.html"><i class="iconfont icon-square"></i>资源管理</a></li>
+					<li><a href="sys_role.html"><i class="iconfont icon-square"></i>角色管理</a></li>
+					<li><a href="sys_dictionary.html"><i class="iconfont icon-square"></i>字典管理</a></li>
+					<li><a href="sys_dailyRecord.html"><i class="iconfont icon-square"></i>系统日志</a></li>
+				</ul>
+			</li>
+		</ul>
+		<div id="main">
+			<!--当前位置-->
+			<div id="position" class="clear bor_b"> 
+				<p class="l">当前位置：<span class="pos">民警工作轨迹  > 查看</span></p>
+				<p class="r"><i class="iconfont icon-home"></i><a href="index.html">返回首页</a><i class="iconfont icon-exit"></i><a href="login.html">退出</a></p>
+			</div>
+			<!--信息展示-->
+			<div id="infoShow" >
+				<!--民警工作轨迹-->
+				<div class="base box bor_b">
+					<table class="tb">
+						<thead>
+							<tr>
+								<th colspan="8">民警工作轨迹</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="b c">警员</td>
+								<td>张三</td>
+								<td class="b c">警号</td>
+								<td>123456</td>
+								<td class="b c">所属派出所</td>
+								<td>东北旺派出所</td>
+								<td class="b c">工作时间</td>
+								<td>2016-12-05  08:21:49--18:04:22</td>
+							</tr>
+							<tr>
+								<td class="b c">下社区</td>
+								<td colspan="7">东北旺马连洼社区</td>
+							</tr>
+							<tr>
+								<td class="b c">工作轨迹</td>
+								<td colspan="7">
+									<div id="track"></div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div style="text-align: center;">
+					<a href="workEffect.html" class="btn_link green">返回</a>
+			</div>
+		</div>
+	</body>
+</html>

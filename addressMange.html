@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>石景山分局入户走访管理平台</title>
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/custom.css" />
+		<link rel="stylesheet" type="text/css" href="fonts/iconfont.css"/>
+		<link rel="stylesheet" href="css/jquery-ui.css" />
+		<script src="js/jquery-1.11.0.js"></script>
+		<script src="js/jquery-ui.js"></script>
+		<script src="js/common.js"></script>
+		<script src="js/index.js"></script>
+	</head>
+	<body>
+		<!--头部-->
+		<div class="header">
+			<h1 class="title l">入户走访管理平台</h1>
+		</div>
+		<!--侧边栏-->
+		<ul class="sidebar">
+			<li><a href="index.html"><i class="iconfont icon-gongzuotai"></i>首页</a></li>
+			<li><a href="ruhu.html"><i class="iconfont icon-rhzf"></i>入户走访管理</a></li>
+			<li><a href="unit.html"><i class="iconfont icon-danwei"></i>单位走访管理</a></li>
+			<li><a href="importMange.html"><i class="iconfont icon-important"></i>重点人员管理</a></li>
+			<li class="active"><a href="addressMange.html"><i class="iconfont icon-address"></i>标准地址管理</a></li>
+			<li><a href="workTips.html"><i class="iconfont icon-tishi"></i>工作提示管理</a></li>
+			<li><a href="workEffect.html"><i class="iconfont icon-gzcx"></i>工作成效管理</a></li>
+			<li><a href="statistic.html"><i class="iconfont icon-tongji"></i>勤务统计分析</a></li>
+			<li><h3><i class="iconfont icon-sysM"></i>系统管理<i class="iconfont arrow icon-up"></i></h3>
+				<ul class="hide">
+					<li><a href="sys_orgnaization.html"><i class="iconfont icon-square"></i>组织机构</a></li>
+					<li><a href="sys_user.html"><i class="iconfont icon-square"></i>用户管理</a></li>
+					<li><a href="sys_resource.html"><i class="iconfont icon-square"></i>资源管理</a></li>
+					<li><a href="sys_role.html"><i class="iconfont icon-square"></i>角色管理</a></li>
+					<li><a href="sys_dictionary.html"><i class="iconfont icon-square"></i>字典管理</a></li>
+					<li><a href="sys_dailyRecord.html"><i class="iconfont icon-square"></i>系统日志</a></li>
+				</ul>
+			</li>
+		</ul>
+		<div id="main">
+			<!--当前位置-->
+			<div id="position" class="clear bor_b"> 
+				<p class="l">当前位置：<span class="pos">标准地址管理</span></p>
+				<p class="r"><i class="iconfont icon-home"></i><a href="index.html">返回首页</a><i class="iconfont icon-exit"></i><a href="login.html">退出</a></p>
+			</div>
+			<!--查询条件-->
+			<div class="search">
+				<form action="#" method="post">
+					<table>
+						<tr>
+							<td><label for="from">走访日期：</label></td>
+							<td><input type="text" id="from" name="from" placeholder="-请选择-"></td>
+							
+							<td><label for="police">重点人类型：</label></td>
+							<td colspan="3">
+								<select name="police" class="selector" id="police">
+									<option disabled selected>-请选择-</option>
+									<option>外国人</option>
+									<option>流动人口</option>
+								</select>
+							</td>
+							<td><label for="police">所属派出所：</label></td>
+							<td colspan="3">
+								<select name="police" class="selector" id="police">
+									<option disabled selected>-请选择-</option>
+									<option>东北旺派出所</option>
+									<option>西北旺派出所</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td><label for="policeman">责任民警：</label></td>
+							<td colspan="3">
+								<select name="policeman" class="selector" id="policeman">
+									<option disabled selected>-请选择-</option>
+									<option>张三</option>
+									<option>李四</option>
+								</select>
+							</td>
+						</tr>
+					</table>
+					<div class="btnGroup">
+						<input type="button" class="blue btn search_btn" value="查询">
+						<input type="reset" class="red btn clear_btn" value="清空">
+					</div>
+				</form>
+			</div>
+			<!--文件列表-->
+			<div class="table" >
+				<div class="tb_box">
+					<table id="addressTb" class="tb">
+					</table>
+					<div id="page"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
